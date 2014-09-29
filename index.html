@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<script type="text/javascript" src="campo.js"></script>
+	<style type="text/css">
+		body
+		{
+			background: black;
+			text-align: center;
+			color: white;
+		}
+		canvas 
+		{
+			background: white;
+		}
+		div
+		{
+			float: right;
+			text-align: center;
+			margin-right: 100px;
+			margin-top: 200px;
+			font-size: 18px;
+		}
+		#label 
+		{
+			color: red;
+		}
+		#boton
+		{
+			visibility: hidden;
+		}
+
+	</style>
+	<title> Juego de Campo Minado! </title>
+</head>
+
+<body>
+<h3>Juego del Campo Minado!</h3>
+<canvas id="campo" width="600" height="600" ></canvas>
+<div>
+<p>Desplazate con las flechas del teclado hasta la bandera, <br /> pero cuidado el terreno esta minado! </p>
+<h2 id="label"></h2>
+<input type="button" id="boton" value="Volver a Jugar!" />
+</div>
+<!-- <audio src="ambiente.mp3" autoplay loop>Html5 no soporta el audio.</audio> -->
+<script type="text/javascript">
+Inicio();
+</script>
+
+</body>
+</html>
