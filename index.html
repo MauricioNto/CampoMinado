@@ -39,12 +39,14 @@
 <body>
 <h3>Juego del Campo Minado!</h3>
 <canvas id="campo" width="600" height="600" ></canvas>
+<input type="button" id="Mute" value="Stop Music" />
 <div>
 <p>Desplazate con las flechas del teclado hasta la bandera, <br /> pero cuidado el terreno esta minado! </p>
 <h2 id="label"></h2>
 <input type="button" id="boton" value="Volver a Jugar!" />
+
 </div>
-<!-- <audio src="ambiente.mp3" autoplay loop>Html5 no soporta el audio.</audio> -->
+<audio id="audio" src="ambiente.mp3" autoplay loop>Html5 no soporta el audio.</audio> 
 <script type="text/javascript">
 Inicio();
 </script>

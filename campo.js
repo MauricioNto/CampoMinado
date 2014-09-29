@@ -1,5 +1,6 @@
 
-var tablero,fondo,militar,boom,label,bombas,minas;
+var tablero,fondo,militar,boom,label,bombas,minas,silencio;
+var i = true;
 
 var Grafico = function(url)
 {
@@ -33,6 +34,10 @@ function Inicio()
 	tablero = canvas.getContext("2d");
 
 	label = document.getElementById("label");
+
+	var silencio = document.getElementById("Mute");
+
+	silencio.addEventListener("click",silenciar);
 
 	fondo = new Grafico("suelo.jpg");
 	militar = new Grafico("militar.png");
@@ -161,6 +166,24 @@ function aleatorio()
 	
 }
 
+function silenciar()
+{
+	var audio = document.getElementById("audio");
 
+	if(i==true)
+	{
+		document.getElementById("Mute").value = "Play Music";
+		audio.muted = true;
+		i = false;
+	}
+	else if(i==false)
+	{
+		i = true;
+		document.getElementById("Mute").value = "Stop Music";
+		audio.muted = false;
+
+	}
+
+}
 
 
